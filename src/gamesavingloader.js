@@ -7,12 +7,12 @@ export default class GameSavingLoader {
     return new Promise((resolve) => {
       const data = read();
       data
-        .then((buffer) => {
-          const value = json(buffer);
+        .then((responce) => {
+          const value = json(responce);
           return value;
         })
-        .then((buffer) => {
-          resolve(new GameSaving(JSON.parse(buffer)));
+        .then((value) => {
+          resolve(new GameSaving(JSON.parse(value)));
         });
     });
   }
