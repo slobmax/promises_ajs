@@ -1,6 +1,6 @@
 import GameSavingLoader from '../gamesavingloader';
 
-test('Проверка загрузки сохранения', (done) => {
+test('Проверка GameSavingLoader.load', (done) => {
   GameSavingLoader.load().then((saving) => {
     const expected = {
       id: 9,
